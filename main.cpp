@@ -33,6 +33,10 @@ public:
     void set_var(string &text) {
         this->var = text;
     }
+
+    void echo() {
+        cout << this->get_name() << " " << this->get_var() << endl;
+    }
 };
 
 vector<VAR> vars;
