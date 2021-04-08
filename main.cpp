@@ -49,6 +49,14 @@ start {
         if ("=" == text) {
             VAR var(tmp, tmp);
             vars.push_back(var);
+
+//vars[1];
+
+            for (auto i: vars) {
+                cout << i.get_name() << ",  " << i.get_var() << endl;
+            }
+
+            cout << "signal" << endl;
             // сказать что следующие слово сохранить в объект
         }
 //если следующие слово, то-есть сейчас текущие, я вытаскиваю последний элемент
