@@ -4,9 +4,34 @@ class VAR {
     string name;
     string var;
 public:
+    VAR() {
+        this->~VAR();
+    }
+
     VAR(string &name, string &var) {
-        this->name = name;
-        this->var = var;
+        set_name(name);
+        set_var(var);
+    }
+
+    ~VAR() {
+        this->name.clear();
+        this->var.clear();
+    }
+
+    string get_name() {
+        return this->name;
+    }
+
+    string get_var() {
+        return this->var;
+    }
+
+    void set_name(string &text) {
+        this->name = text;
+    }
+
+    void set_var(string &text) {
+        this->var = text;
     }
 };
 
