@@ -1,44 +1,13 @@
 #include "syntax.h"
+#include <iostream>
+#include <vector>
+#include <string>
+#include <list>
 
-class VAR {
-    string name;
-    string var;
-public:
-    VAR() {
-        this->~VAR();
-    }
 
-    VAR(string &name, string &var) {
-        set_name(name);
-        set_var(var);
-    }
+#include "VAR.h"
 
-    ~VAR() {
-        this->name.clear();
-        this->var.clear();
-    }
-
-    string get_name() {
-        return this->name;
-    }
-
-    string get_var() {
-        return this->var;
-    }
-
-    void set_name(string &text) {
-        this->name = text;
-    }
-
-    void set_var(string &text) {
-        this->var = text;
-    }
-
-    void echo() {
-        cout << this->get_name() << " " << this->get_var() << endl;
-    }
-};
-
+using namespace std;
 vector<VAR> vars;
 
 void echo_vector(vector<VAR> &list_var, const string &sep = " ",
@@ -48,9 +17,8 @@ void echo_vector(vector<VAR> &list_var, const string &sep = " ",
     cout << end_line;
 }
 
-
-start {
-    begin;
+int main() {//(int args_length, char *args_array[]) {
+    BEGIN;
     string tmp, text;
     while (true) {
         text.clear();
@@ -63,8 +31,6 @@ start {
         if ("=" == text) {
             VAR var(tmp, tmp);
             vars.push_back(var);
-
-//vars[1];
 
             echo_vector(vars, " ", "\n");
             cout << "signal" << endl;
@@ -82,7 +48,7 @@ start {
 
         tmp = text;
     }
-    end;
+    END;
 }
 
 /**
