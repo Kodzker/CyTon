@@ -41,6 +41,14 @@ public:
 
 vector<VAR> vars;
 
+void echo_vector(vector<VAR> &list_var, const string &sep = " ",
+                 const string &end_line = "\n") {
+    for (auto i: list_var)
+        cout << i.get_name() << "," << sep << i.get_var() << sep;
+    cout << end_line;
+}
+
+
 start {
     begin;
     string tmp, text;
