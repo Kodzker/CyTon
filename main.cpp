@@ -1,4 +1,4 @@
-#include "syntax.h"
+//#include "syntax.h"
 #include <iostream>
 #include <vector>
 #include <string>
@@ -18,7 +18,7 @@ void echo_vector(vector<VAR> &list_var, const string &sep = " ",
 }
 
 int main() {//(int args_length, char *args_array[]) {
-    BEGIN;
+//    BEGIN;
     string tmp, text;
     while (true) {
         text.clear();
@@ -48,7 +48,7 @@ int main() {//(int args_length, char *args_array[]) {
 
         tmp = text;
     }
-    END;
+//    END;
 }
 
 /**
