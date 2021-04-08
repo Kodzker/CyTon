@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/run/media/cytoncode/GIT/CyTon/main.cpp
+syntax.h
+/run/media/cytoncode/GIT/CyTon/syntax.h
+
+/run/media/cytoncode/GIT/CyTon/syntax.h
+iostream
+-
+vector
+-
+string
+-
+list
+-
+

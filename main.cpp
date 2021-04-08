@@ -55,9 +55,11 @@ start {
     while (true) {
         text.clear();
         cin >> text;
+
         if ("exit" == text) {
             break;
         }
+
         if ("=" == text) {
             VAR var(tmp, tmp);
             vars.push_back(var);
