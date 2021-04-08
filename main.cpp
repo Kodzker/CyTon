@@ -1,10 +1,6 @@
-//#include "syntax.h"
 #include <iostream>
 #include <vector>
 #include <string>
-#include <list>
-
-
 #include "VAR.h"
 
 using namespace std;
@@ -17,8 +13,8 @@ void echo_vector(vector<VAR> &list_var, const string &sep = " ",
     cout << end_line;
 }
 
-int main() {//(int args_length, char *args_array[]) {
-//    BEGIN;
+// на самом деле аргументы исполнитель принимать будет, но пока что они не нужны
+int main() {
     string tmp, text;
     while (true) {
         text.clear();
@@ -48,7 +44,6 @@ int main() {//(int args_length, char *args_array[]) {
 
         tmp = text;
     }
-//    END;
 }
 
 /**
