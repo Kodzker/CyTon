@@ -64,10 +64,7 @@ start {
 
 //vars[1];
 
-            for (auto i: vars) {
-                cout << i.get_name() << ",  " << i.get_var() << endl;
-            }
-
+            echo_vector(vars, " ", "\n");
             cout << "signal" << endl;
             // сказать что следующие слово сохранить в объект
         }
