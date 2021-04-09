@@ -5,7 +5,8 @@
 #ifndef CYTON_VARIABLES_H
 #define CYTON_VARIABLES_H
 
-#include "VAR.h"
+#include "variable.h"
+#include <vector>
 
 class VAR_LIST {
     vector<VAR> vars;
