@@ -45,6 +45,25 @@ public:
     void echo(){
         // вывод массива не екран.
     }
+
+    void push(VAR &tmp) {
+        //if (ее нет в именах)
+        this->vars.push_back(tmp);
+        // иначе удалить и візвать єту функцию рекурсивно.
+    }
+
+    auto pop() {
+        if (!this->vars.empty())
+            return this->vars.pop_back();
+    }
+
+//    auto length() {
+//        return this->vars.size();
+//    }
+
+    VAR get() {
+        return this->vars[this->vars.size() - 1];
+    }
 /**
  * +я массив переменных.
  * +я могу вернуть массив, иметь копирование массива.
