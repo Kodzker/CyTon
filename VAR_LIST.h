@@ -36,14 +36,17 @@ public:
         return this->vars;
     }
 
-    bool is_name_in(string &text) { // поиск имени в массиве
+    bool search_name(const string &text) { // поиск имени в массиве
         for (auto var: this->vars)
             if (text == var.get_name())
                 return true;
         return false;
     }
-    void echo(){
-        // вывод массива не екран.
+
+    // вывод массива не экран.
+    void _echo_() {
+        for (auto var: this->vars)
+            var._echo_();
     }
 
     void push(VAR &tmp) {
@@ -57,9 +60,9 @@ public:
             return this->vars.pop_back();
     }
 
-//    auto length() {
-//        return this->vars.size();
-//    }
+    int _len_() {
+        return this->vars.size();
+    }
 
     VAR get() {
         return this->vars[this->vars.size() - 1];
