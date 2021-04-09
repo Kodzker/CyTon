@@ -2,8 +2,8 @@
 // Created by cyton_code on 09.04.2021.
 //
 
-#ifndef CYTON_VAR_LIST_H
-#define CYTON_VAR_LIST_H
+#ifndef CYTON_VARIABLES_H
+#define CYTON_VARIABLES_H
 
 #include "VAR.h"
 
@@ -85,4 +85,4 @@ public:
 };
 
 
-#endif //CYTON_VAR_LIST_H
+#endif //CYTON_VARIABLES_H
