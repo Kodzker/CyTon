@@ -5,6 +5,7 @@
 #ifndef CYTON_VAR_H
 #define CYTON_VAR_H
 
+#include <string>
 
 class VAR {
     std::string name;
