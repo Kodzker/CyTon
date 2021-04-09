@@ -8,36 +8,36 @@
 #include "variable.h"
 #include <vector>
 
-class VAR_LIST {
-    vector<VAR> vars;
+class variables {
+    std::vector<variable> vars;
 
     void _clear() {
         this->vars.clear();
     }
 
 public:
-    VAR_LIST() { // конструктор
+    variables() { // конструктор
         this->_clear();
-        cout << "[start list]" << endl;
+        std::cout << "[start list]" << std::endl;
     }
 
-    VAR_LIST(const vector<VAR> &array) { // копирование
-        this->~VAR_LIST();
+    variables(const std::vector<variable> &array) { // копирование
+        this->~variables();
         for (const auto &i: array) {
             this->vars.push_back(i);
         }
     }
 
-    ~VAR_LIST() { // деструктор
+    ~variables() { // деструктор
         this->_clear();
-        cout << "[exit list]" << endl;
+        std::cout << "[exit list]" << std::endl;
     }
 
-    vector<VAR> get_VAR_LIST() { // вставка
+    std::vector<variable> get_VAR_LIST() { // вставка
         return this->vars;
     }
 
-    bool search_name(const string &text) { // поиск имени в массиве
+    bool _search_(const std::string &text) { // поиск имени в массиве
         for (auto var: this->vars)
             if (text == var.get_name())
                 return true; // оно есть
@@ -50,12 +50,13 @@ public:
             var._echo_();
     }
 
-    void push(VAR &tmp) {
-        if (!this->search_name(tmp.get_name()) && tmp.get_name() != ".")
+    // TODO ЭТА ФУНКЦИЯ НА РАБОТАЕТ ТАК КАК НАДО. НЕДОРАБОТАНА
+    void push(variable &tmp) {
+        if (!this->_search_(tmp.get_name()) && tmp.get_name() != ".")
             //if (ее нет в именах) и оно не пустое:
             this->vars.push_back(tmp);
         else {
-            cout << "not name!" << endl;
+            std::cout << "not name!" << std::endl;
         }
         // иначе удалить и візвать єту функцию рекурсивно.
     }
@@ -65,11 +66,11 @@ public:
             return this->vars.pop_back();
     }
 
-    int _len_() {
+    unsigned int _len_() {
         return this->vars.size();
     }
 
-    VAR &get() {
+    variable &get() {
         return this->vars[this->vars.size() - 1];
     }
 /**
