@@ -20,7 +20,7 @@ public:
         cout << "[start list]" << endl;
     }
 
-    VAR_LIST(vector<VAR> &array) { // копирование
+    VAR_LIST(const vector<VAR> &array) { // копирование
         this->~VAR_LIST();
         for (const auto &i: array) {
             this->vars.push_back(i);
@@ -32,15 +32,15 @@ public:
         cout << "[exit list]" << endl;
     }
 
-    vector<VAR> GET_VAR_LIST() { // вставка
+    vector<VAR> get_VAR_LIST() { // вставка
         return this->vars;
     }
 
     bool search_name(const string &text) { // поиск имени в массиве
         for (auto var: this->vars)
             if (text == var.get_name())
-                return true;
-        return false;
+                return true; // оно есть
+        return false; // его нет
     }
 
     // вывод массива не экран.
@@ -68,7 +68,7 @@ public:
         return this->vars.size();
     }
 
-    VAR get() {
+    VAR &get() {
         return this->vars[this->vars.size() - 1];
     }
 /**
