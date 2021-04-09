@@ -4,22 +4,19 @@
 
 
 using namespace std;
+
 #include "VAR_LIST.h"
+#include "py_cpp.h"
 
-vector<VAR> vars;
+using namespace py_cpp;
+VAR_LIST vars;
 
-void echo_vector(vector<VAR> &list_var, const string &sep = " ",
-                 const string &end_line = "\n") {
-    for (auto i: list_var)
-        cout << i.get_name() << "," << sep << i.get_var() << sep;
-    cout << end_line;
-}
 
 // на самом деле аргументы исполнитель принимать будет, но пока что они не нужны
 int main() {
-    string tmp, text;
+    string tmp = ".", text = ".";
     while (true) {
-        text.clear();
+        text = ".";
         cin >> text;
 
         if ("exit" == text) {
