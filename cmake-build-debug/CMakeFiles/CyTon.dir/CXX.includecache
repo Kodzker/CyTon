@@ -6,17 +6,19 @@
 
 #IncludeRegexTransform: 
 
-/run/media/cytoncode/GIT/CyTon/main.cpp
-syntax.h
-/run/media/cytoncode/GIT/CyTon/syntax.h
+/run/media/cytoncode/GIT/CyTon/VAR.h
 
-/run/media/cytoncode/GIT/CyTon/syntax.h
+/run/media/cytoncode/GIT/CyTon/VAR_LIST.h
+VAR.h
+/run/media/cytoncode/GIT/CyTon/VAR.h
+
+/run/media/cytoncode/GIT/CyTon/main.cpp
 iostream
 -
 vector
 -
 string
 -
-list
--
+VAR_LIST.h
+/run/media/cytoncode/GIT/CyTon/VAR_LIST.h
 
