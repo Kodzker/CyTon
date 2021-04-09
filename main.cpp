@@ -28,17 +28,17 @@ int main() {
 
         if ("=" == text) {
             VAR var(tmp, tmp);
-            vars.push_back(var);
-
-            echo_vector(vars, " ", "\n");
+            vars.push(var);
+            print(vars);
             cout << "signal" << endl;
             // сказать что следующие слово сохранить в объект
         }
 
         if ("=" == tmp) {
-            vars[vars.size() - 1].echo();
-            vars[vars.size() - 1].set_var(text);
-            vars[vars.size() - 1].echo();
+            // добавить в последний text
+            print(vars.get());
+            vars.get().set_var(text);
+            print(vars.get());
             //если следующие слово, то-есть сейчас текущие, я вытаскиваю последний
             // элемент и вбиваю его в ресурсы а после возвращаю обратно в вектор.
             // Сказать что ничего не говорил.
@@ -46,6 +46,7 @@ int main() {
 
         tmp = text;
     }
+    print(vars);
 }
 
 /**
