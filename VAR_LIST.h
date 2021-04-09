@@ -50,8 +50,12 @@ public:
     }
 
     void push(VAR &tmp) {
-        //if (ее нет в именах)
-        this->vars.push_back(tmp);
+        if (!this->search_name(tmp.get_name()) && tmp.get_name() != ".")
+            //if (ее нет в именах) и оно не пустое:
+            this->vars.push_back(tmp);
+        else {
+            cout << "not name!" << endl;
+        }
         // иначе удалить и візвать єту функцию рекурсивно.
     }
 
