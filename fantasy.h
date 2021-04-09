@@ -2,10 +2,10 @@
 // Created by cyton_code on 09.04.2021.
 //
 
-#ifndef CYTON_PY_CPP_H
-#define CYTON_PY_CPP_H
-namespace py_cpp {
+#ifndef CYTON_FANTASY_H
+#define CYTON_FANTASY_H
 
+#include <vector>
 
 namespace python {
     // данная функция предназначена для вывода на экран объекта его методами.
@@ -13,9 +13,8 @@ namespace python {
         obj._echo_();
     }
 
-
     // данная функция просит у объекта количество его содержимого используя его методы.
-    // actually: VAR_LIST, List
+    // actually: variables, List
     int len(auto &obj) {
         return obj._len_();
     }
@@ -23,7 +22,7 @@ namespace python {
 
     // данная функция возвращает количество элементов, ориентируясь на вектора.
     template<typename T>
-    int len(vector<T> &obj) {
+    int len(std::vector<T> &obj) {
         return obj.size();
     }
 }
@@ -33,4 +32,6 @@ namespace fantasy {
         return vars._search_(var.get_name());
     }
 }
-#endif //CYTON_PY_CPP_H
+
+
+#endif //CYTON_FANTASY_H
