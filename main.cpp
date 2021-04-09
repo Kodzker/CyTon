@@ -14,10 +14,10 @@ VAR_LIST vars;
 
 // на самом деле аргументы исполнитель принимать будет, но пока что они не нужны
 int main() {
-    string tmp = ".", text = ".";
+    std::string tmp = ".", text = ".";
     while (true) {
         text = ".";
-        cin >> text;
+        std::cin >> text;
 
         if ("exit" == text) {
             break;
@@ -26,16 +26,16 @@ int main() {
         if ("=" == text) {
             VAR var(tmp, tmp);
             vars.push(var);
-            print(vars);
-            cout << "signal" << endl;
+            python::print(vars);
+            std::cout << "signal" << std::endl;
             // сказать что следующие слово сохранить в объект
         }
 
         if ("=" == tmp) {
             // добавить в последний text
-            print(vars.get());
+            python::print(vars.get());
             vars.get().set_var(text);
-            print(vars.get());
+            python::print(vars.get());
             //если следующие слово, то-есть сейчас текущие, я вытаскиваю последний
             // элемент и вбиваю его в ресурсы а после возвращаю обратно в вектор.
             // Сказать что ничего не говорил.
@@ -43,7 +43,7 @@ int main() {
 
         tmp = text;
     }
-    print(vars);
+    python::print(vars);
 }
 
 /**
