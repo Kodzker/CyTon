@@ -2,25 +2,25 @@
 // Created by cyton_code on 09.04.2021.
 //
 
-#ifndef CYTON_VAR_H
-#define CYTON_VAR_H
+#ifndef CYTON_VARIABLE_H
+#define CYTON_VARIABLE_H
 
 #include <string>
 
-class VAR {
+class variable {
     std::string name;
     std::string var;
 public:
-    VAR() {
-        this->~VAR();
+    variable() {
+        this->~variable();
     }
 
-    VAR(std::string &name, std::string &var) {
+    variable(std::string &name, std::string &var) {
         set_name(name);
         set_var(var);
     }
 
-    ~VAR() {
+    ~variable() {
         this->name.clear();
         this->var.clear();
     }
@@ -47,4 +47,4 @@ public:
 };
 
 
-#endif //CYTON_VAR_H
+#endif //CYTON_VARIABLE_H
