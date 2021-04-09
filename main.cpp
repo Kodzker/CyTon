@@ -1,9 +1,9 @@
 #include <iostream>
-#include <vector>
-#include <string>
+#include "fantasy.h"
+//using namespace std;
+//using namespace fantasy;
 
-
-using namespace std;
+#include "variables.h"
 
 #include "VAR_LIST.h"
 #include "py_cpp.h"
