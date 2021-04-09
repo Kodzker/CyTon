@@ -40,8 +40,8 @@ public:
         this->var = text;
     }
 
-    void echo() {
-        std::cout << this->get_name() << " " << this->get_var() << std::endl;
+    void _echo_() {
+        std::cout << this->get_name() << ": " << this->get_var() << std::endl;
     }
 };
 
