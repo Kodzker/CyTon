@@ -7,6 +7,7 @@
 namespace py_cpp {
 
 
+namespace python {
     // данная функция предназначена для вывода на экран объекта его методами.
     void print(auto &obj) {
         obj._echo_();
@@ -25,10 +26,11 @@ namespace py_cpp {
     int len(vector<T> &obj) {
         return obj.size();
     }
-
-    // есть ли arg в in_args:
-    bool is(auto arg, auto in_args) {
-        return in_args._search(arg);
+}
+namespace fantasy {
+    // есть ли var в vars:
+    bool is_there(auto &var,/*in*/ auto &vars) {
+        return vars._search_(var.get_name());
     }
 }
 #endif //CYTON_PY_CPP_H
