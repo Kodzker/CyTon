@@ -5,11 +5,7 @@
 
 #include "variables.h"
 
-#include "VAR_LIST.h"
-#include "py_cpp.h"
-
-using namespace py_cpp;
-VAR_LIST vars;
+variables vars;
 
 
 // на самом деле аргументы исполнитель принимать будет, но пока что они не нужны
