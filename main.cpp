@@ -24,7 +24,7 @@ int main() {
         }
 
         if ("=" == text) {
-            VAR var(tmp, tmp);
+            variable var(tmp, tmp);
             vars.push(var);
             python::print(vars);
             std::cout << "signal" << std::endl;
