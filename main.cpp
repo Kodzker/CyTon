@@ -1,9 +1,11 @@
 #include <iostream>
 #include <vector>
 #include <string>
-#include "VAR.h"
+
 
 using namespace std;
+#include "VAR_LIST.h"
+
 vector<VAR> vars;
 
 void echo_vector(vector<VAR> &list_var, const string &sep = " ",
