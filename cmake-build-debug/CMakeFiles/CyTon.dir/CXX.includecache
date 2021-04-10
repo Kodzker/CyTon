@@ -6,23 +6,25 @@
 
 #IncludeRegexTransform: 
 
-/run/media/cytoncode/GIT/CyTon/VAR.h
-
-/run/media/cytoncode/GIT/CyTon/VAR_LIST.h
-VAR.h
-/run/media/cytoncode/GIT/CyTon/VAR.h
+/run/media/cytoncode/GIT/CyTon/fantasy.h
+vector
+-
 
 /run/media/cytoncode/GIT/CyTon/main.cpp
 iostream
 -
-vector
--
+fantasy.h
+/run/media/cytoncode/GIT/CyTon/fantasy.h
+variables.h
+/run/media/cytoncode/GIT/CyTon/variables.h
+
+/run/media/cytoncode/GIT/CyTon/variable.h
 string
 -
-VAR_LIST.h
-/run/media/cytoncode/GIT/CyTon/VAR_LIST.h
-py_cpp.h
-/run/media/cytoncode/GIT/CyTon/py_cpp.h
 
-/run/media/cytoncode/GIT/CyTon/py_cpp.h
+/run/media/cytoncode/GIT/CyTon/variables.h
+variable.h
+/run/media/cytoncode/GIT/CyTon/variable.h
+vector
+-
 
