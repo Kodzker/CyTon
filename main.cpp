@@ -39,6 +39,9 @@ int main() {
 
         tmp = text;
     }
+    for (int i = 0; i < python::len(vars); i++) {
+        python::print(vars.get_variables()[i]);
+    }
     python::print(vars);
 }
 
