@@ -73,6 +73,22 @@ public:
     variable &get() {
         return this->vars[this->vars.size() - 1];
     }
+
+//    variables *_swap_() {
+//        return this;
+//    }
+
+//    template<typename typ>
+    void swap(variables &obj1, variables &obj2) {
+        variables tmp1, tmp2;
+
+        tmp1 = obj1;
+        tmp2 = obj2;
+
+        obj1 = tmp2;
+        obj2 = tmp1;
+    }
+
 /**
  * +я массив переменных.
  * +я могу вернуть массив, иметь копирование массива.
