@@ -39,6 +39,13 @@ public:
         return false; // его нет
     }
 
+    int _get_id_(const std::string &name) {
+        for (int i = 0; i < this->vars.size(); i++)
+            if (name == this->vars[i].get_name())
+                return i;
+        throw NameItsNotDefined();
+    }
+
     // вывод массива не экран.
     void _echo_() {
         for (auto var: this->vars)
