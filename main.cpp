@@ -1,10 +1,10 @@
 #include <iostream>
 #include "fantasy.h"
+
 //using namespace std;
 //using namespace fantasy;
 //using namespace python;
 
-#include "variables.h"
 
 variables vars;
 
