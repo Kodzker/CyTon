@@ -70,6 +70,18 @@ public:
         return this->vars.size();
     }
 
+    // почистить массив.
+    void _clear_() {
+        this->vars.clear();
+    }
+
+    // удалить меня.
+    void _del_() {
+        this->~variables();
+        delete this;
+    }
+
+    // дать получить доступ изменять последнего.
     variable &get() {
         return this->vars[this->vars.size() - 1];
     }
