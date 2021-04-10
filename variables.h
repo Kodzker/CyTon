@@ -88,6 +88,19 @@ public:
         return this->vars[this->vars.size() - 1];
     }
 
+    void add(std::string &name) {
+        std::string var;
+        variable tmp(name, var);
+        this->push(tmp);
+    }
+
+    void upd(std::string &name, std::string &var) {
+        if (!this->_search_(name))
+            throw NameItsNotDefined(); // этого  имени нет!
+        // это имя есть:
+        this->_get_id_(name);
+
+    }
 //    variables *_swap_() {
 //        return this;
 //    }
