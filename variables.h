@@ -10,14 +10,9 @@
 
 class variables {
     std::vector<variable> vars;
-
-    void _clear() {
-        this->vars.clear();
-    }
-
 public:
     variables() { // конструктор
-        this->_clear();
+        this->_clear_();
         std::cout << "[start list]" << std::endl;
     }
 
@@ -29,11 +24,11 @@ public:
     }
 
     ~variables() { // деструктор
-        this->_clear();
+        this->_clear_();
         std::cout << "[exit list]" << std::endl;
     }
 
-    std::vector<variable> get_VAR_LIST() { // вставка
+    std::vector<variable> get_variables() { // вставка
         return this->vars;
     }
 
