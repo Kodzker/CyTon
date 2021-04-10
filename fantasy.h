@@ -7,6 +7,7 @@
 
 #include <vector>
 #include "exc/NameItsNotDefined.h"
+#include "exc/DoubleCreatedVariable.h"
 #include "variables.h"
 
 namespace python {
