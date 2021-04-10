@@ -19,10 +19,11 @@ int main() {
         if ("exit" == text) {
             break;
         }
-
+        // если текущее равно, то предыдущее это имя.
         if ("=" == text) {
-            variable var(tmp, tmp);
-            vars.push(var);
+//            variable var(tmp, tmp);
+//            vars.push(var);
+            vars.add(tmp);
             python::print(vars);
             std::cout << "signal" << std::endl;
             // сказать что следующие слово сохранить в объект
