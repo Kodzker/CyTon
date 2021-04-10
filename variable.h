@@ -44,6 +44,20 @@ public:
     void _echo_() {
         std::cout << this->get_name() << ": " << this->get_var() << std::endl;
     }
+
+    bool _equally_(variable &obj) {
+        if (obj.get_name() == this->get_name() && obj.get_var() == this->get_var())
+            return true;
+        return false;
+    }
+
+    // удалить меня.
+    void _del_() {
+        this->~variable();
+        delete this;
+    }
+
+
 };
 
 
