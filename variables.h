@@ -89,6 +89,8 @@ public:
     }
 
     void add(std::string &name) {
+        if (this->_search_(name))
+            throw NameItsNotDefined(); // это  имя уже есть!
         std::string var;
         variable tmp(name, var);
         this->push(tmp);
