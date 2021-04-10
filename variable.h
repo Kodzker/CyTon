@@ -10,6 +10,7 @@
 class variable {
     std::string name;
     std::string var;
+    std::string id;
 public:
     variable() {
         this->~variable();
