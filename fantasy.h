@@ -25,11 +25,36 @@ namespace python {
     int len(std::vector<T> &obj) {
         return obj.size();
     }
+
+
+    void clear(auto &obj) {
+        obj._clear_();
+    }
+
+    void del(auto &obj) {
+        obj._del_();
+    }
+
+    template<typename typ>
+    void swap(typ &obj1, typ &obj2) {
+        typ tmp1, tmp2;
+
+        tmp1 = obj1;
+        tmp2 = obj2;
+
+        obj1 = tmp2;
+        obj2 = tmp1;
+    }
+
 }
 namespace fantasy {
     // есть ли var в vars:
     bool is_there(auto &var,/*in*/ auto &vars) {
         return vars._search_(var.get_name());
+    }
+
+    bool equally(auto &obj, auto &obj2) {
+        return obj._equally_(obj2);
     }
 }
 
