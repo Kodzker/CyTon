@@ -6,6 +6,8 @@
 #define CYTON_FANTASY_H
 
 #include <vector>
+#include "exc/NameItsNotDefined.h"
+#include "variables.h"
 
 namespace python {
     // данная функция предназначена для вывода на экран объекта его методами.
