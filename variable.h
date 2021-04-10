@@ -8,6 +8,7 @@
 #include <string>
 
 class variable {
+private:
     std::string name;
     std::string var;
     std::string id;
