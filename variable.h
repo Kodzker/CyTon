@@ -25,11 +25,11 @@ public:
         this->var.clear();
     }
 
-    std::string get_name() {
+    std::string &get_name() {
         return this->name;
     }
 
-    std::string get_var() {
+    std::string &get_var() {
         return this->var;
     }
 
