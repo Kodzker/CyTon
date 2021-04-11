@@ -7,18 +7,24 @@
 
 #include <string>
 
-class variable {
+class variable : protected container {
 private:
-    std::string name;
-    std::string var;
-    std::string id;
-public:
-    variable() {
-        this->~variable();
+    std::string name; // идентификатор переменной или массива.
+    std::vector<std::string> var; // var - 1 элемент, array - больше элементов указателей на имена var.
+//    std::string id; // походу раньше я добавлю type
+    std::string type; // array - (var указывает на имя), var (var просто переменная)
+
+    void _set_name(std::string &text) {
+        this->name = text;
     }
 
-    variable(std::string &name, std::string &var) {
-        set_name(name);
+public:
+    variable() {
+        this->variable::~variable();
+    }
+
+    variable(std::string &name, std::vector<std::string> &var) {
+        _set_name(name);
         set_var(var);
     }
 
@@ -27,24 +33,21 @@ public:
         this->var.clear();
     }
 
-    std::string &get_name() {
+    std::string &get_name() override {
         return this->name;
     }
 
-    std::string &get_var() {
+    std::vector<std::string> &get_var() {
         return this->var;
     }
 
-    void set_name(std::string &text) {
-        this->name = text;
-    }
 
-    void set_var(std::string &text) {
+    void set_var(std::vector<std::string> &text) {
         this->var = text;
     }
 
     void _echo_() {
-        std::cout << this->get_name() << ": " << this->get_var() << std::endl;
+        std::cout << this->get_name() << ": " << this->get_var()[0] << std::endl;
     }
 
     bool _equally_(variable &obj) {
@@ -54,12 +57,15 @@ public:
     }
 
     // удалить меня.
-    void _del_() {
-        this->~variable();
+    void _del_() override {
+        this->variable::~variable();
         delete this;
     }
-
-
+    void _add_(std::string &_name, std::string &_type = (std::string &) "void") override {
+        //, std::vector<std::string> &var) {
+        this->name = _name;
+        this->type = _type;
+    } // объявление переменной, всегда вызывается даже неявно.
 };
 
 

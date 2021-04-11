@@ -6,7 +6,6 @@
 #define CYTON_VARIABLES_H
 
 #include "variable.h"
-#include <vector>
 
 class variables {
     std::vector<variable> vars;
@@ -32,9 +31,9 @@ public:
         return this->vars;
     }
 
-    bool _search_(const std::string &text) { // поиск имени в массиве
+    bool _search_(const std::string &name) { // поиск имени в массиве
         for (auto var: this->vars)
-            if (text == var.get_name())
+            if (name == var.get_name())
                 return true; // оно есть
         return false; // его нет
     }
@@ -60,7 +59,7 @@ public:
         else {
             std::cout << "not name!" << std::endl;
         }
-        // иначе удалить и візвать єту функцию рекурсивно.
+        // иначе удалить и вызвать єту функцию рекурсивно.
     }
 
     auto pop() {
@@ -91,7 +90,7 @@ public:
     void add(std::string &name) {
         if (this->_search_(name))
             throw NameItsNotDefined(); // это  имя уже есть!
-        std::string var;
+        std::vector<std::string> var;
         variable tmp(name, var);
         this->push(tmp);
     }
