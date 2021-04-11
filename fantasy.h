@@ -6,6 +6,7 @@
 #define CYTON_FANTASY_H
 
 #include <vector>
+#include "container.h"
 #include "exc/NameItsNotDefined.h"
 #include "exc/DoubleCreatedVariable.h"
 #include "variables.h"
